@@ -26,7 +26,7 @@ public static void main(String args[])throws IOException
 {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter string: ");
-        String s = br.readLine()+' ';
+        String s = br.readLine();
         String rev="",s1="";
     int l=s.length();
 
