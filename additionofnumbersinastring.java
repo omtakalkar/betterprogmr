@@ -9,21 +9,28 @@ public class BetterProgrammerTask {
           For example, s="12 some text 3  7", result: 22 (12+3+7=22)
          */
 
-          int sum=0;
-          String[] temp;
-          temp=s.split("");
-          for(int i=0; i<temp.length();i++)
-         {
-              if(isNumeric(String temp[i]))
-             sum=sum+Integer.parseInt(temp[i]);
-          }
-          System.out.println("sum :" + sum);
-    
-          
+          String[] stringArray = s.split(" ");
+    int sum=0;
+    int temp=0;
+    for(int i=0;i<stringArray.length;i++){
+        try{
+            
+            temp = Integer.parseInt(stringArray[i]);
+            sum += temp;
+        }catch(Exception e){
+            
+        }
     }
+    return sum;
+}
+          
+    
 
          public static void main(String[] args)
         {
-               BetterProgrammerTask.getSumOfNumbers("12 some text 3  7");
+        	
+        	 BetterProgrammerTask btr = new BetterProgrammerTask();
+        	 btr.getSumOfNumbers("12 some text 3  7");
+             
          }
 }
